@@ -1,0 +1,161 @@
+###Ubuntu16.04安装Anaconda3.5
+(1) bash  Anaconda3-5.1.0-Linux-x86_64.sh
+    anaconda-nevigator
+(2) gedit /etc/profile
+    vim /etc/profile 
+    vim ~/.bashrc
+(3) export PATH="/home/ubuntu/anaconda3/bin:$PATH"
+(4) source /etc/profile 
+    source ~/.bashrc
+    echo $PATH 
+    python --version
+    conda --version
+    conda list
+    conda info --envs
+(5) conda update -n base conda
+    conda update conda
+(6) conda create -n tensorflow36 python=3.6
+    conda remove -n tensorflow36 --all
+(7) conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+(8) conda config --set show_channel_urls yes
+(9) conda install numpy
+    cp -r anaconda3 /home/yang/anaconda3
+(10) source activate tensorflow36
+     source deactivate
+(11) sudo apt install python3-pip
+     python3 -m pip install --upgrade pip --force-reinstall
+(12) pip install \
+  -i https://pypi.tuna.tsinghua.edu.cn/simple/ \
+  https://mirrors.tuna.tsinghua.edu.cn/tensorflow/linux/cpu/tensorflow-1.4.0-cp36-cp36m-linux_x86_64.whl
+(13) python
+(14) import tensorflow as tf
+     hello=tf.constant('hello,Tensorflow')
+     sess=tf.Session()
+     print(sess.run(hello))
+(15) pip3 install tf_nightly-1.6.0.dev20180114-cp36-cp36m-manylinux1_x86_64.whl
+
+###Ubuntu16.04安装Teamviewer
+(1) 链接：https://www.teamviewer.com/zhcn/download/linux/
+(2) sudo apt-get -f install
+(3) sudo dpkg -i teamviewer_13.1.8286_amd64.deb
+(4) teamviewer
+
+###Ubuntu16.04安装pycharm
+(1) 链接：http://www.jetbrains.com/pycharm/download/#section=linux
+(2) sh ./pycharm.sh(在解压缩文件目录的bin/下执行)
+
+###Ubuntu16.04安装nvidia显卡驱动解决循环登录
+(1) sudo add-apt-repository ppa:graphics-drivers/ppa
+(2) sudo apt-get update
+(3) sudo apt-get remove --purge nvidia-*
+(4) sudo apt-get autoremove #特别重要
+(5) sudo apt-get install -f #特别重要
+(6) sudo reboot
+(7) sudo apt-get install nvidia-384
+    参考链接：https://www.jianshu.com/p/d45434f28ca0   
+    Ubuntu 16.04下Nvidia 显卡驱动安装：https://www.linuxidc.com/Linux/2016-12/138907.htm
+    
+###配置Ubuntu静态地址
+(1) gedit /etc/network/interfaces
+###添加内容如下：
+# interfaces(5) file used by ifup(8) and ifdown(8)
+auto enp6s0
+iface enp6s0 inet loopback
+address 192.168.0.26
+netmask 255.255.255.0
+network 192.168.0.0
+broadcast 192.168.0.255
+gateway 192.168.0.1
+###
+(2) gedit /etc/resolv.conf
+###添加内容如下：
+nameserver 114.114.114.114
+(3) sudo /etc/init.d/networking/restart
+(4) gedit /etc/resolvconf/resolv.conf.d/base(如无效使用)  
+
+###用户名xxx不在sudoers文件中，此事将被报告
+(1) root    ALL=(ALL:ALL) ALL  
+
+###修改root密码
+(1) sudo passwd root
+
+###查看显卡驱动
+ lshw -c video
+ configurure字段有木有driver字样
+ nvidia-smi
+
+###查看GPU型号
+ lspci | grep -i vga
+
+###查看NVIDIA驱动版本
+ sudo dpkg --list | grep nvidia-*
+########################################################################
+
+###警告：Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+链接：https://blog.csdn.net/hq86937375/article/details/79696023
+	
+###吴恩达deeplearning课程作业环境:
+链接：https://blog.csdn.net/pkrobbie/article/details/79346722
+
+###Ubuntu+Tensorflow+CUDA8.0+cudnn
+链接：
+ https://blog.csdn.net/icehui2012/article/details/62219008
+ http://www.52nlp.cn/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%BB%E6%9C%BA%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-ubuntu16-04-geforce-gtx1080-tensorflow
+
+###编译安装TensorFlow
+git clone https://github.com/tensorflow/tensorflow
+chmod +x bazel-0.9.0-installer-linux-x86_64.sh
+./bazel-0.9.0-installer-linux-x86_64.sh --user
+yum install nvidia-detect
+nvidia-detect -v
+
+chmod +x NVIDIA-Linux-x86_64-384.98.run
+sh NVIDIA-Linux-x86_64-384.98.run --dkms -s
+nvidia-smi
+Wed Jan  3 23:22:15 2018       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 384.98                 Driver Version: 384.98                    |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  Quadro M2000        Off  | 00000000:01:00.0 Off |                  N/A |
+|  0%   40C    P0    24W /  75W |      0MiB /  4031MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID   Type   Process name                             Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+
+lshw -c video
+lspci | grep -i vga
+lspci -v -s 01:00.0
+
+systemctl get-default //获取当前系统启动模式
+cat /etc/inittab        查看配置文件
+systemctl set-default graphical.target由命令行模式更改为图形界面模式
+systemctl set-default multi-user.target由图形界面模式更改为命令行模式
+
+ls /etc/sysconfig/network-scripts/
+ifcfg-eno1
+
+#BOOTPROTO="dhcp"
+IPADDR0=172.30.81.75
+PREFIX0=24
+GATEWAY0=172.30.87.254
+DNS1=114.114.114.114
+
+yum install autossh
+
+ssh -NfR 2222:localhost:22 root@67.216.217.132 -p28092
+autossh -M 2000-NR 2222:localhost:22 root@67.216.217.132 -p28092
+
+kYMHW5rhsbUX
+
+chown -R root. /var/empty/sshd/
+service sshd restart
+/bin/systemctl restart sshd.service
+ vim /etc/ssh/sshd_config
