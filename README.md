@@ -1,8 +1,8 @@
-# Undergraduate Courses(UESTC)
+# Postgraduate  Courses(UESTC)
 
 ---
 #### **软件工程**
-**研究生重要课程**
+**研究生课程**
 
 **研一**
 * 组合优化理论
@@ -30,6 +30,8 @@
 * 逆向工程
 
 ---
+# Undergraduate Courses(HAUT)
+
 #### **物联网工程**
 
 **本科重要课程**
