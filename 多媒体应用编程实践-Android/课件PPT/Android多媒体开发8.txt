@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="320dip"
+        android:layout_height="260dip" >
+    </VideoView>
+
+</LinearLayout>
+
+_________________________________________________________________
+_________________________________________________________________
+
+
+package com.example.testvidio;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.MediaController;
+import android.widget.VideoView;
+
+public class MainActivity extends Activity {
+
+	    private VideoView videoView;  
+
+	     @Override 
+
+	     public void onCreate(Bundle savedInstanceState) {  
+
+	         super.onCreate(savedInstanceState);  
+
+	         setContentView(R.layout.activity_main);  
+	         videoView = (VideoView) this.findViewById(R.id.videoView);  
+
+	         MediaController mc = new MediaController(this);  
+
+	         videoView.setMediaController(mc);  
+
+	         //videoView.setVideoURI(Uri.parse(""));  
+
+	         videoView.setVideoPath("/sdcard/test.mp4");  
+
+	         videoView.requestFocus();  
+
+	         videoView.start();  
+
+	 }
+}

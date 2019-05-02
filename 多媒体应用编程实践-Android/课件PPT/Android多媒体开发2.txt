@@ -1,0 +1,138 @@
+public class MyActivity extends Activity { 
+
+  // 在完整生存期开始的时候调用 
+  @Override 
+  public void onCreate(Bundle icicle) { 
+    super.onCreate(icicle); 
+    // 初始化一个活动 
+  } 
+
+  // 在onCreate方法完成之后调用，用来恢复UI状态 
+  @Override 
+  public void onRestoreInstanceState(Bundle savedInstanceState) { 
+    super.onRestoreInstanceState(savedInstanceState); 
+    //从savedInstanceState中恢复UI状态 
+    // 这个bundle也被传递给onCreate 
+  } 
+
+  // 在一个活动进程的后续的可见生存期之前调用 
+  @Override 
+  public void onRestart(){ 
+    super.onRestart(); 
+    // 当知道这个进程中的活动已经可见之后，载入改变 
+  } 
+
+  // 在可见生存期开始时调用 
+  @Override 
+  public void onStart(){ 
+  super.onStart(); 
+  // 既然活动可见，就应用任何要求的UI改变 
+  } 
+
+  // 在活动状态生存期开始时调用 
+  @Override 
+  public void onResume(){ 
+  super.onResume(); 
+  //恢复活动所需要的任何暂停的UI更新、线程或者进程，但是当不活动的时候，就挂起它们 
+  } 
+
+  // 在活动状态生存期结束的时候调用，用来保存UI状态改变 
+  @Override 
+  public void onSaveInstanceState(Bundle savedInstanceState) { 
+  //把UI状态改变保存到savedInstanceState 
+  //如果进程被销毁或者重启，那么这个bundle将被传递给onCreate super.onSaveInstanceState(savedInstanceState); 
+  } 
+
+  // 在活动状态生存期结束时调用 
+  @Override 
+  public void onPause(){ 
+  //当活动不是前台的活动状态的活动时，挂起不需要更新的UI更新、线程或者CPU密集的进程。 super.onPause(); } 
+  // 在可见生存期结束时调用 
+
+  @Override 
+  public void onStop(){ 
+  // 当进程不可见的时候，挂起不需要的剩下的UI更新、线程或者处理，保存所有的编辑或者 
+  // 状态改变，因为这个进程可能会被销毁(从而为其他进程释资源) 
+  super.onStop(); 
+  } 
+
+  // 在完整生存期结束时调用 
+  @Override 
+  public void onDestroy(){ 
+  // 清空所有的资源，包括结束线程、关闭数据库连接等。 
+  super.onDestroy(); 
+  } 
+
+} 
+
+-----------------------------
+-----------------------------
+TestEvent
+
+layout文件activity_main.xml:
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/screen"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+    
+    <TextView android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="24sp"
+        android:text="@string/text1" />
+    
+    <Button android:id="@+id/button1"
+        android:layout_width="80sp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/red"
+	android:onClick="turnRed"/>
+    
+    <Button android:id="@+id/button2"
+        android:layout_width="80sp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/green"
+	android:onClick="turnGreen"/>
+    
+</LinearLayout>
+
+-----------------------------
+sting.xml增加相应项目
+    <string name="text1">Text Backgroud</string>
+    <string name="red">Red</string>
+    <string name="green">Green</string>
+
+-----------------------------
+TestEvent.java
+package com.work.testevent1;
+
+import android.app.Activity;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
+
+public class MainActivity extends Activity {
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+	}
+	
+	 public void turnRed(View view) {
+		 TextView Text = (TextView) findViewById(R.id.text1); // 获得句柄	
+		 Text.setBackgroundColor(Color.RED);
+	 }
+	 
+	 public void turnGreen(View view) {
+		 TextView Text = (TextView) findViewById(R.id.text1); // 获得句柄	
+		 Text.setBackgroundColor(Color.GREEN);
+	 }
+
+}
+
+

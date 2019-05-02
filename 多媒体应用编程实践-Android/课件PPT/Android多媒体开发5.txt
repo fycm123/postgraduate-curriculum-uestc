@@ -1,0 +1,151 @@
+DrawShapeActivity.java
+
+Paint LinePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+LinePaint.setStyle(Paint.Style.STROKE);
+LinePaint.setColor(Color.RED);
+canvas.drawCircle(canvas.getWidth()/3, canvas.getHeight()/3, canvas.getWidth()/4, LinePaint);
+
+-----------------------------
+-----------------------------
+Canvas extends Object
+java.lang.Object   ?android.graphics.Canvas
+
+void	 drawARGB(int a, int r, int g, int b)
+Fill the entire canvas' bitmap (restricted to the current clip) with the specified ARGB color, using srcover porterduff mode.
+void	 drawArc(RectF oval, float startAngle, float sweepAngle, boolean useCenter, Paint paint)
+Draw the specified arc, which will be scaled to fit inside the specified oval.
+void	 drawBitmap(int[] colors, int offset, int stride, float x, float y, int width, int height, boolean hasAlpha, Paint paint)
+Treat the specified array of colors as a bitmap, and draw it.
+void	 drawBitmap(Bitmap bitmap, Matrix matrix, Paint paint)
+Draw the bitmap using the specified matrix.
+void	 drawBitmap(int[] colors, int offset, int stride, int x, int y, int width, int height, boolean hasAlpha, Paint paint)
+Legacy version of drawBitmap(int[] colors, ...) that took ints for x,y
+void	 drawBitmap(Bitmap bitmap, Rect src, RectF dst, Paint paint)
+Draw the specified bitmap, scaling/translating automatically to fill the destination rectangle.
+void	 drawBitmap(Bitmap bitmap, float left, float top, Paint paint)
+Draw the specified bitmap, with its top/left corner at (x,y), using the specified paint, transformed by the current matrix.
+void	 drawBitmap(Bitmap bitmap, Rect src, Rect dst, Paint paint)
+Draw the specified bitmap, scaling/translating automatically to fill the destination rectangle.
+void	 drawBitmapMesh(Bitmap bitmap, int meshWidth, int meshHeight, float[] verts, int vertOffset, int[] colors, int colorOffset, Paint paint)
+Draw the bitmap through the mesh, where mesh vertices are evenly distributed across the bitmap.
+void	 drawCircle(float cx, float cy, float radius, Paint paint)
+Draw the specified circle using the specified paint.
+void	 drawColor(int color)
+Fill the entire canvas' bitmap (restricted to the current clip) with the specified color, using srcover porterduff mode.
+void	 drawColor(int color, PorterDuff.Mode mode)
+Fill the entire canvas' bitmap (restricted to the current clip) with the specified color and porter-duff xfermode.
+void	 drawLine(float startX, float startY, float stopX, float stopY, Paint paint)
+Draw a line segment with the specified start and stop x,y coordinates, using the specified paint.
+void	 drawLines(float[] pts, Paint paint)
+void	 drawLines(float[] pts, int offset, int count, Paint paint)
+Draw a series of lines.
+void	 drawOval(RectF oval, Paint paint)
+Draw the specified oval using the specified paint.
+void	 drawPaint(Paint paint)
+Fill the entire canvas' bitmap (restricted to the current clip) with the specified paint.
+void	 drawPath(Path path, Paint paint)
+Draw the specified path using the specified paint.
+void	 drawPicture(Picture picture, RectF dst)
+Draw the picture, stretched to fit into the dst rectangle.
+void	 drawPicture(Picture picture)
+Save the canvas state, draw the picture, and restore the canvas state.
+void	 drawPicture(Picture picture, Rect dst)
+Draw the picture, stretched to fit into the dst rectangle.
+void	 drawPoint(float x, float y, Paint paint)
+Helper for drawPoints() for drawing a single point.
+void	 drawPoints(float[] pts, int offset, int count, Paint paint)
+Draw a series of points.
+void	 drawPoints(float[] pts, Paint paint)
+Helper for drawPoints() that assumes you want to draw the entire array
+void	 drawPosText(char[] text, int index, int count, float[] pos, Paint paint)
+Draw the text in the array, with each character's origin specified by the pos array.
+void	 drawPosText(String text, float[] pos, Paint paint)
+Draw the text in the array, with each character's origin specified by the pos array.
+void	 drawRGB(int r, int g, int b)
+Fill the entire canvas' bitmap (restricted to the current clip) with the specified RGB color, using srcover porterduff mode.
+void	 drawRect(float left, float top, float right, float bottom, Paint paint)
+Draw the specified Rect using the specified paint.
+void	 drawRect(RectF rect, Paint paint)
+Draw the specified Rect using the specified paint.
+void	 drawRect(Rect r, Paint paint)
+Draw the specified Rect using the specified Paint.
+void	 drawRoundRect(RectF rect, float rx, float ry, Paint paint)
+Draw the specified round-rect using the specified paint.
+void	 drawText(String text, float x, float y, Paint paint)
+Draw the text, with origin at (x,y), using the specified paint.
+void	 drawText(CharSequence text, int start, int end, float x, float y, Paint paint)
+Draw the specified range of text, specified by start/end, with its origin at (x,y), in the specified Paint.
+void	 drawText(char[] text, int index, int count, float x, float y, Paint paint)
+Draw the text, with origin at (x,y), using the specified paint.
+void	 drawText(String text, int start, int end, float x, float y, Paint paint)
+Draw the text, with origin at (x,y), using the specified paint.
+void	 drawTextOnPath(String text, Path path, float hOffset, float vOffset, Paint paint)
+Draw the text, with origin at (x,y), using the specified paint, along the specified path.
+void	 drawTextOnPath(char[] text, int index, int count, Path path, float hOffset, float vOffset, Paint paint)
+Draw the text, with origin at (x,y), using the specified paint, along the specified path.
+void	 drawVertices(Canvas.VertexMode mode, int vertexCount, float[] verts, int vertOffset, float[] texs, int texOffset, int[] colors, int colorOffset, short[] indices, int indexOffset, int indexCount, Paint paint)
+Draw the array of vertices, interpreted as triangles (based on mode).
+
+
+-----------------------------
+-----------------------------
+Paint extends Object
+java.lang.Object    ?	android.graphics.Paint
+void	 set(Paint src)
+Copy the fields from src into this paint.
+void	 setARGB(int a, int r, int g, int b)
+Helper to setColor(), that takes a,r,g,b and constructs the color int
+void	 setAlpha(int a)
+Helper to setColor(), that only assigns the color's alpha value, leaving its r,g,b values unchanged.
+void	 setAntiAlias(boolean aa)
+Helper for setFlags(), setting or clearing the ANTI_ALIAS_FLAG bit AntiAliasing smooths out the edges of what is being drawn, but is has no impact on the interior of the shape.
+void	 setColor(int color)
+Set the paint's color.
+ColorFilter	 setColorFilter(ColorFilter filter)
+Set or clear the paint's colorfilter, returning the parameter.
+void	 setDither(boolean dither)
+Helper for setFlags(), setting or clearing the DITHER_FLAG bit Dithering affects how colors that are higher precision than the device are down-sampled.
+void	 setFakeBoldText(boolean fakeBoldText)
+Helper for setFlags(), setting or clearing the FAKE_BOLD_TEXT_FLAG bit
+void	 setFilterBitmap(boolean filter)
+Helper for setFlags(), setting or clearing the FILTER_BITMAP_FLAG bit.
+void	 setFlags(int flags)
+Set the paint's flags.
+void	 setHinting(int mode)
+Set the paint's hinting mode.
+void	 setLinearText(boolean linearText)
+Helper for setFlags(), setting or clearing the LINEAR_TEXT_FLAG bit
+MaskFilter	 setMaskFilter(MaskFilter maskfilter)
+Set or clear the maskfilter object.
+PathEffect	 setPathEffect(PathEffect effect)
+Set or clear the patheffect object.
+Rasterizer	 setRasterizer(Rasterizer rasterizer)
+Set or clear the rasterizer object.
+
+
+-----------------------------
+-----------------------------
+
+Path extends Object
+java.lang.Object   ?	android.graphics.Path
+
+void	 addArc(RectF oval, float startAngle, float sweepAngle)
+Add the specified arc to the path as a new contour.
+void	 addCircle(float x, float y, float radius, Path.Direction dir)
+Add a closed circle contour to the path
+void	 addOval(RectF oval, Path.Direction dir)
+Add a closed oval contour to the path
+void	 addPath(Path src, float dx, float dy)
+Add a copy of src to the path, offset by (dx,dy)
+void	 addPath(Path src)
+Add a copy of src to the path
+void	 addPath(Path src, Matrix matrix)
+Add a copy of src to the path, transformed by matrix
+void	 addRect(float left, float top, float right, float bottom, Path.Direction dir)
+Add a closed rectangle contour to the path
+void	 addRect(RectF rect, Path.Direction dir)
+Add a closed rectangle contour to the path
+void	 addRoundRect(RectF rect, float[] radii, Path.Direction dir)
+Add a closed round-rectangle contour to the path.
+void	 addRoundRect(RectF rect, float rx, float ry, Path.Direction dir)
+Add a closed round-rectangle contour to the path

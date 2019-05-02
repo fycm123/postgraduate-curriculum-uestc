@@ -1,0 +1,23 @@
+Path extends Object
+java.lang.Object   ?	android.graphics.Path
+
+void	 addArc(RectF oval, float startAngle, float sweepAngle)
+Add the specified arc to the path as a new contour.
+void	 addCircle(float x, float y, float radius, Path.Direction dir)
+Add a closed circle contour to the path
+void	 addOval(RectF oval, Path.Direction dir)
+Add a closed oval contour to the path
+void	 addPath(Path src, float dx, float dy)
+Add a copy of src to the path, offset by (dx,dy)
+void	 addPath(Path src)
+Add a copy of src to the path
+void	 addPath(Path src, Matrix matrix)
+Add a copy of src to the path, transformed by matrix
+void	 addRect(float left, float top, float right, float bottom, Path.Direction dir)
+Add a closed rectangle contour to the path
+void	 addRect(RectF rect, Path.Direction dir)
+Add a closed rectangle contour to the path
+void	 addRoundRect(RectF rect, float[] radii, Path.Direction dir)
+Add a closed round-rectangle contour to the path.
+void	 addRoundRect(RectF rect, float rx, float ry, Path.Direction dir)
+Add a closed round-rectangle contour to the path
