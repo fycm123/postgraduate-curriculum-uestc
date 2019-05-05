@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="hello">pingbao</string>
+  <string name="app_name">pingbao</string>
+  <string name="app_about">关于我们</string>
+  <string name="app_about_msg">屏幕保护程序～</string>
+  <string name="str_ok">确认</string>
+  <string name="str_exit">退出</string>
+  <string name="str_set_pwd">设置密码</string>
+  <string name="str_pwd_please">密码解锁</string>
+</resources>

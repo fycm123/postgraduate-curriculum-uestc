@@ -1,0 +1,25 @@
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:background="@drawable/white"
+  android:layout_width="fill_parent" 
+  android:layout_height="wrap_content" 
+  android:orientation="vertical">
+  <TextView
+    android:id="@+id/myTextView2"
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content"
+    android:textColor="@drawable/blue"
+    android:visible="true"
+    android:text="@string/str_pwd_please"/>
+  <EditText 
+    android:id="@+id/myEditText2" 
+    android:layout_height="wrap_content" 
+    android:layout_width="fill_parent" 
+    android:layout_marginLeft="1dip" 
+    android:layout_marginRight="1dip" 
+    android:autoText="false"
+    android:capitalize="none"
+    android:gravity="fill_horizontal"
+    android:singleLine="True"
+  />
+</LinearLayout>
