@@ -35,6 +35,7 @@
 * 矩阵理论
 * Android系统结构与应用编程（CMMI实践）
 
-## [UESTC-Windows&Office-ms.uestc.edu.cn](http://ms.uestc.edu.cn/)
+---
+[UESTC-Windows&Office-ms.uestc.edu.cn](http://ms.uestc.edu.cn/)
 
 
