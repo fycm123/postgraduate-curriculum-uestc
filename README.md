@@ -34,7 +34,7 @@
 * 算法分析与设计
 * 矩阵理论
 * Android系统结构与应用编程（CMMI实践）
-
+* 嵌入式系统
 ---
 [UESTC-Windows&Office-ms.uestc.edu.cn](http://ms.uestc.edu.cn/)
 
