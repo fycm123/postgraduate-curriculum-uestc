@@ -1,7 +1,8 @@
 # Postgraduate-Curriculum-UESTC
+University of Electronic Science and Technology of China
 
 ---
-#### **软件工程（Software Engineering）**
+#### **电子科技大学 信息与软件工程学院 软件工程（Software Engineering）**
 **研究生课程**
 
 **研一上(10 courses)**
