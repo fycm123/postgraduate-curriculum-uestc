@@ -4,7 +4,9 @@
 + [Awesome-Hacking](https://github.com/Hack-with-Github/Awesome-Hacking)
 + [Tuts 4 You](https://tuts4you.com/)
 + [x64dbg](https://github.com/x64dbg/x64dbg)
-+ [使用ollydbg破解第一个小程序](https://blog.csdn.net/tianxiayijia1998/article/details/46594089)
 + [OllyDBG完美教程(超强入门级)](https://blog.csdn.net/imjaron/article/details/79684815)
++ [OllyDBG工具使用-逆向TraceMe.exe](https://www.cnblogs.com/17bdw/p/6706190.html)
++ [使用ollydbg破解第一个小程序](https://blog.csdn.net/tianxiayijia1998/article/details/46594089)
 + []()
 + []()
+
