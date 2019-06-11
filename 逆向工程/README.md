@@ -5,8 +5,8 @@
 + [逆向工程核心原理-代码及案例](https://github.com/wlmnzf/reversecore/tree/master/01/02/src/HelloWorld)
 + [逆向工程核心原理之栈帧学习](https://blog.csdn.net/liminglei960316/article/details/80872608)
 + [OllyDBG完美教程-超强入门级](https://blog.csdn.net/imjaron/article/details/79684815)
-+ [OllyDBG工具使用-逆向TraceMe.exe](https://www.cnblogs.com/17bdw/p/6706190.html)
 + [使用ollydbg破解第一个小程序](https://blog.csdn.net/tianxiayijia1998/article/details/46594089)
-+ []()
++ [OllyDBG工具使用-逆向TraceMe.exe](https://www.cnblogs.com/17bdw/p/6706190.html)
++ [使用x64dbg分析64位TraceMe.exe](https://blog.csdn.net/qq_37865996/article/details/87892469)
 + []()
 
