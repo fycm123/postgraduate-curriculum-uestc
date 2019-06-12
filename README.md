@@ -1,8 +1,11 @@
 # Postgraduate-Curriculum-UESTC
-University of Electronic Science and Technology of China
+#### **电子科技大学(University of Electronic Science and Technology of China)
+信息与软件工程学院(School of Information and Software Engineering)
+软件工程（Software Engineering）**
+
 + Friendly Link：[uestc-course@Xovee](https://github.com/Xovee/uestc-course)
 ---
-#### **电子科技大学 信息与软件工程学院 软件工程（Software Engineering）**
+
 **研究生课程**
 
 **研一上(10 courses)**
