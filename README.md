@@ -34,14 +34,15 @@
 * 逆向工程
 
 **补充**
+* 矩阵理论
+* 嵌入式系统
 * 稳定性及其应用
 * 算法分析与设计
-* 矩阵理论
 * Android系统结构与应用编程（CMMI实践）
-* 嵌入式系统
 * 新信息源：重新定义大数据（人文教育与学术交流）
 * 沟通艺术（人文教育与学术交流）
+
 ---
-[UESTC-Windows&Office-ms.uestc.edu.cn](http://ms.uestc.edu.cn/)
++ UESTC-Windows&Office：[ms.uestc.edu.cn](http://ms.uestc.edu.cn/)
 
 
