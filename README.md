@@ -1,3 +1,4 @@
+![GitHub repo size](https://img.shields.io/github/repo-size/yansicing/postgraduate-curriculum-uestc.svg)
 # Postgraduate-Curriculum-UESTC
 ##### 电子科技大学（University of Electronic Science and Technology of China）
 ##### 信息与软件工程学院（School of Information and Software Engineering）
