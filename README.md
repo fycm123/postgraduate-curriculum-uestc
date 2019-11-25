@@ -42,6 +42,9 @@
 * Android系统结构与应用编程（CMMI实践）
 * 新信息源：重新定义大数据（人文教育与学术交流）
 * 沟通艺术（人文教育与学术交流）
+* 信息安全数学基础
+* 计算思维导论
+* 马克思主义
 
 ---
 + UESTC-Windows&Office：[ms.uestc.edu.cn](http://ms.uestc.edu.cn/)
